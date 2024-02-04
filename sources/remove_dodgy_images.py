@@ -1,5 +1,5 @@
 from pathlib import Path
-import random as rd
+import shutil
 
 ## Select non-dodgy images
 spc_name = "Gyps africanus"
@@ -29,7 +29,7 @@ for img_file in all_img:
     suffixe = img_file.suffix
     new_name = Path.cwd()/ "data"/ \
         f"{spc_name} {str(img_number).zfill( len(str(len(all_img))) )}{suffixe}"
-    Path.rename(img_file, new_name)
+    shutil.copy(img_file, new_name)
 
 ## Split data into train, val and test
 split_folder = ["train", "val", "test"]
@@ -47,9 +47,10 @@ train_img = correct_img[:2000]
 val_img = correct_img[2000:2800]
 test_img = correct_img[2800:]
 
+
 for file in train_img:
-    Path.rename(file, Path(file.parent, "train", file.name))
+    shutil.copy(file, Path(file.parent, "train", file.name))
 for file in val_img:
-    Path.rename(file, Path(file.parent, "val", file.name))
+    shutil.copy(file, Path(file.parent, "val", file.name))
 for file in test_img:
-    Path.rename(file, Path(file.parent, "test", file.name))
+    shutil.copy(file, Path(file.parent, "test", file.name))
