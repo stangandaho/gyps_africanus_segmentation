@@ -1,5 +1,5 @@
 # Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
-path: D:/Python Projects/Deep Learning/WbV/dataset  # dataset root dir
+path: /content/drive/MyDrive/Deep Learning/WbV/dataset  # dataset root dir
 train: images/train  # train images (relative to 'path') 4 images
 val: images/val  # val images (relative to 'path') 4 images
 test:  # test images (optional)
@@ -8,5 +8,13 @@ test:  # test images (optional)
 names:
   0: Gyps africanus
   1: Nest
+  2: Trigonoceps occipitalis
+  3: Torgos tracheliotos
+  4: Saggitarius serpentarius
+  5: Leptoptilos crumenifer
+  6: Alopochen aegyptiaca
+  7: Bubulcus ibis
+  8: Terathopius ecaudatus
+  9: Necrosyrtes monachus
 
 ## 'C:\Users\ganda\AppData\Roaming\Ultralytics\settings.yaml'
